@@ -1,32 +1,46 @@
+html{
+    width: 100%;
+}
 body{
     font-family: 'Raleway', sans-serif;
-    
+    height: 100%; 
+    width: 100%;
+    position: absolute;
 }
 a{
     text-decoration: none;
 }
-
-
+h1{
+    font-size: 1.4em;
+}
 /*En-tête*/
 header{
     display: flex;
     flex-direction: row;
 }
 .logoReservia{
-    flex: 2;
+    order: 1;
+    flex: 3;
     margin: auto; 
 }
 .logoReservia img{
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 75px;
 }
 .mainMenu{
-    flex: 1;
-            
+    order: 2;
+    flex: 2;         
+}
+.linkLogIn{
+    order: 3;
+    flex:1;
+    margin-top: 2.3em;
+    margin-left: 2em;
+    color: #0065FC;
 }
 nav ul{
     display: flex;
-    list-style-type: none;
+    list-style-type: none;  
 }
 .link a:hover{
     color: #0065FC;
@@ -37,39 +51,43 @@ nav ul{
 .link a{
     color: initial;
 }
-     
 .link{
     margin: 20px;
 }
-
-/*Fin de l'en-tête*/
-
-/*Début du titre en-tête*/
-h1{
-    font-size: 1.4em;
+.linkLogIn a{
+    font-weight: 800;
+    color: #0065FC
 }
-/*Fin du titre en-tête*/
+.linkLogIn :hover{
+    cursor: pointer;
+    color: white;
+    border: 1px #0065FC solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #0065FC;
+    padding: 30px 5px 30px;
+    padding-top: 100%;
+}
+/*Fin En-tête*/
 
 /*Début Barre de Recherche*/
 .location{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    
-    }
+    align-items: center;  
+}
 .locationIcon{
     border-left: 2px #F2F2F2 solid ;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color:#F2F2F2 ;
     padding: 15px;
-    }
+}
 .locationName input{
     padding: 15px;
     border: none;
-   
+    font-size: 1.2em;
 }
-
 .locationResearch{
     border-right: 2px #0065FC solid;
     border-top-right-radius: 10px;
@@ -79,16 +97,17 @@ h1{
     padding-right: 20px;
 }
 .locationResearch p{
-    color: white;
-    
+    color: white;   
+}
+.fa-search{
+    visibility: hidden;
 }
 /*Fin Barre de Recherche*/
 
 /*Début Filtres*/
 .filter{
     display: flex;
-    flex-direction: row;
-      
+    flex-direction: row;    
 }
 ul {
     display: flex;
@@ -100,20 +119,19 @@ li{
 }
 .filterTitle{
     margin-left: 20px;
-    margin-top: 20px;
-   
+    margin-top: 20px;  
 }
 
 .filterIcon{
     color:#0065FC ;
     border: 1px #DEEBFF solid;
     border-radius: 100%;
-    padding: 10px;
+    padding: 16px;
     background-color: #DEEBFF;
 }
 .filterIconChild{
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
 }
 .filterList{
     display: flex;
@@ -123,6 +141,10 @@ li{
     border-radius: 50px;
     margin: 10px;
     padding-right: 20px;
+}
+.filterList p{
+    font-weight: bold;
+    padding-left: 10px;
 }
 .filter ul li :hover{
     background-color: #DEEBFF;
@@ -134,23 +156,22 @@ li{
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 20px;
 }
 .informationIcon{
-    margin: 5px;
-    
+    margin: 5px;  
 }
 
 /*Fin Info*/
 
 /*Début Section*/
-.section{
+section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
-    width: 100%;
-    height: auto;
-    
+    width: auto;
+    min-height: 100%;       
 }
 .fa-star.blue{
     color: #0065FC;
@@ -165,36 +186,32 @@ li{
     background-color:#F2F2F2 ;
     border-radius: 20px;
     width: 65%;
-    margin: auto;
-    padding-left: 20px;
-    
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
 }
 .hostingMainCard{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
-       
 }
 .hostingCard img{
     display: flex;
     align-content: center;
-    width: 250px;
-    height: 125px;
+    width: 98%;
+    height: 150px;
     object-fit: cover;
     padding: 5px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-
 .hostingCard{
     border: 1px #F2F2F2 solid ;
     box-shadow: 6px 6px 6px gray;
     border-radius: 20px;
     margin: 10px;
-    
-   
-}
+    width: 30%;
+ }
 .hostingCardInfo{
     
     margin-left: 20px;
@@ -204,7 +221,6 @@ li{
 .hostingMore{
     margin-left: 20px;
     margin-top: 20px;
-
 }
 /*Fin Hébergements*/
 
@@ -214,7 +230,6 @@ li{
     border-radius: 20px;
     width: 30%; 
     padding: 10px;
-
 }
 .famousTitle{
     display: flex;
@@ -232,14 +247,13 @@ li{
     align-items: stretch;
 }
 .famous img{
-    width: 150px;
-    height: 150px;
+    width: 50%;
+    height: 180px;
     object-fit: cover;
     float: left;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     margin: 5px;
-
 }
 .famousCard{
     border: 1px #F2F2F2 solid ;
@@ -253,9 +267,8 @@ li{
     padding-left: 10px;
     color: initial;
 }
-.famousCardIcon i{
-    align-self: flex-end;
-    margin-bottom: 5px;
+.famousCardIcon{
+    padding-top: 70px;
 }
 
 /*Fin Populaires*/
@@ -302,12 +315,19 @@ li{
     grid-row-start: 3;
     grid-row-end: span 2;
 } 
-.activityCard img{
-    width: 320px;
+.imgXlarge img{
+    width: 100%;
     height: 450px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    margin: 5px;
+    object-fit: cover;
+   
+}
+.imgLarge img{
+    width: 100%;
+    height: 190px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     object-fit: cover;
    
 }
@@ -315,35 +335,217 @@ li{
     border: 1px #F2F2F2 solid ;
     box-shadow: 6px 6px 6px gray;
     border-radius: 20px;
-    margin: 10px;
-    padding-left: 5px;
-    padding-bottom: 10px;
-    
-            
+    margin: 20px;
+    padding-bottom: 10px;           
 }
-.activityCard p {
-    background-color: lightseagreen;
+figcaption {
     margin: 5px;
+    padding: 5px;
     color: initial;
+    font-weight: bold;
 }
-
 /*Fin Activités*/
 
 /*Début Footer*/
-.footer{
-    padding: 30px;
+footer{
+    background-color: #F2F2F2;
+    margin-top:100px;
+    padding: 20px;
+    height: auto;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
 }
-.footer ul{
+.footerList ul{
     display: block;
+    flex-direction: column;
     line-height: 2;
+    margin: 2em;
 }
-
 .footerList a{
-    color: initial;
-    
+    color: initial;   
 }
 /*Fin du Footer*/
 
+/*Début MediaQuery Tablet*/
+@media only screen and (min-width: 600px) and (max-width: 1024px){      
+.filter{
+    flex-wrap: wrap;
+}
+ul li{
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+section{
+    display: block;
+    flex-direction: column;
+    width: 95%;
+    padding: 10px;
+    margin: 10px;
+}  
+.hosting{
+    order: 2;
+    width: 95%;
+    padding: 10px;
+}
+.hostingCard{
+    width: 45%;
+} 
+.famous{
+    display: flex;
+    flex-flow: column wrap;
+    order: 1;
+    justify-content: center;
+    width: 95%;
+    margin-top: 20px;
+}
+.famousMainCard{
+    width: 90%;
+}
+.activity{
+    order: 3;
+    width: 95%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+}
+.activityMainCard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.activityCard{
+    width: 48%;
+}
+.activityCard img{
+    width: 100%;
+    height: 200px;
+}
+footer{
+    width: 100%;
+    bottom: 0; left: 0; right: 0;
+}
+}
+/*Fin MediaQuery Tablet*/
+
+/*Début MediaQuery Phone*/
+@media only screen and (min-width: 320px) and (max-width: 600px){
+header{ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;   
+}
+.logoReservia{
+    order: 1;
+    margin-left: 30px;
+}
+.mainMenu{
+    order: 3;
+    display: flex;
+    flex-direction: row;
+}
+.linkLogIn{
+    order: 2;
+    margin: auto;
+}
+.mainMenu ul{
+    flex-wrap: nowrap;
+    width: 100%; 
+    border-bottom: 4px #F2F2F2 solid;
+}
+.mainMenu li{
+    margin-right: 3em;
+}
+.mainMenu ul :hover{
+    cursor: pointer;
+    border-top: none;
+    border-bottom: 2px #0065FC solid ;
+    width: 100%;   
+}
+.location{
+    justify-content: center;
+}
+.locationResearch{
+    display: none;
+    order: 4;
+}
+.locationName input{
+    width: 240px;
+}
+.fa-search{
+    visibility: visible;
+    color: white;
+    border: 1px #0065FC solid;
+    border-radius: 10px;
+    padding: 16px;
+    background-color: #0065FC;
+}
+.filter{
+    display: flex;
+    flex-direction: column;
+}
+.link{
+    display: flex;
+    flex-direction: row;
+}
+ul{
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-right: 40px;
+}
+section{
+    display: block;
+    flex-direction: column;
+    width: 100%;
+}
+.hosting{
+    order: 2;
+    width: 100%;
+    padding-top: 20px;
+    background-color: unset;
+}
+.hostingCard{
+    width: 95%;
+}
+.hostingMainCard{
+    display: flex;
+    flex-direction: column;
+}
+.famous{
+    order: 1;
+    width: 100%;
+}
+.famousMainCard{
+    display: flex;
+    flex-direction: column;
+}
+.activity{
+    width: 100%;
+    height: 60em;
+    padding-bottom: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.activityMainCard{
+    display: flex;
+    flex-direction: column;
+}
+.activityCard img{
+    width: 100%;
+    height: 150px;
+}
+footer{
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.footerList ul{
+    margin: none;
+}
+}
+/*Fin MediaQuery Phone*/
 
