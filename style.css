@@ -7,6 +7,10 @@ body{
     width: 100%;
     position: absolute;
 }
+header, section, footer{
+    position: relative;
+    box-sizing: border-box;
+}
 a{
     text-decoration: none;
 }
@@ -354,6 +358,7 @@ footer{
     height: auto;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 .footerList ul{
     display: block;
@@ -433,7 +438,7 @@ footer{
 header{ 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;   
+    flex-wrap: wrap;
 }
 .logoReservia{
     order: 1;
@@ -450,17 +455,15 @@ header{
 }
 .mainMenu ul{
     flex-wrap: nowrap;
-    width: 100%; 
-    border-bottom: 4px #F2F2F2 solid;
+    width: 100%;
 }
 .mainMenu li{
     margin-right: 3em;
 }
-.mainMenu ul :hover{
-    cursor: pointer;
-    border-top: none;
-    border-bottom: 2px #0065FC solid ;
-    width: 100%;   
+.link a:hover{
+    border-top: unset;
+    padding-top: unset;
+    border-bottom: 2px #0065FC solid ;     
 }
 .location{
     justify-content: center;
@@ -495,18 +498,18 @@ ul{
     padding-right: 40px;
 }
 section{
-    display: block;
+    display: flex;
     flex-direction: column;
-    width: 100%;
+    width: auto;
 }
 .hosting{
     order: 2;
-    width: 100%;
+    width: auto;
     padding-top: 20px;
     background-color: unset;
 }
 .hostingCard{
-    width: 95%;
+    width: auto;
 }
 .hostingMainCard{
     display: flex;
@@ -514,14 +517,15 @@ section{
 }
 .famous{
     order: 1;
-    width: 100%;
+    width: auto;
 }
 .famousMainCard{
     display: flex;
     flex-direction: column;
 }
 .activity{
-    width: 100%;
+    order: 3;
+    width: auto;
     height: 60em;
     padding-bottom: 100%;
     display: flex;
@@ -536,15 +540,14 @@ section{
     height: 150px;
 }
 footer{
-    width: 100%;
+    width: auto;
     height: auto;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 .footerList ul{
-    margin: none;
+    margin: 1em;
 }
 }
 /*Fin MediaQuery Phone*/
