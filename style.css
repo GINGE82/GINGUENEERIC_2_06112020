@@ -62,7 +62,6 @@ header{
 .linkLogIn :hover{
     cursor: pointer;
     color: white;
-    border: 1px #0065FC solid;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: #0065FC;
@@ -85,7 +84,6 @@ header{
     margin: 20px 30px 20px 30px; 
 }
 .locationIcon{
-    border-left: 2px #F2F2F2 solid ;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color:#F2F2F2 ;
@@ -97,7 +95,6 @@ header{
     font-size: 1.2em;
 }
 .locationResearch{
-    border-right: 2px #0065FC solid;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: #0065FC;
@@ -125,7 +122,6 @@ header{
 }
 .filterIcon{
     color:#0065FC ;
-    border: 1px #DEEBFF solid;
     border-radius: 100%;
     padding: 16px;
     background-color: #DEEBFF;
@@ -458,6 +454,9 @@ section{
 .famousMainCard{
     width: 90%;
 }
+.famousCardIcon{
+    padding-top: 90px;
+}
 .activity{
     order: 3;
     width: 95%;
@@ -551,7 +550,6 @@ a.activityLink:hover{
 .fa-search{
     visibility: visible;
     color: white;
-    border: 1px #0065FC solid;
     border-radius: 10px;
     padding: 16px;
     background-color: #0065FC;
@@ -592,6 +590,9 @@ section{
 .famousMainCard{
     display: flex;
     flex-direction: column;
+}
+.famousCardIcon{
+    padding-top: 50px;
 }
 .activity{
     order: 3;
