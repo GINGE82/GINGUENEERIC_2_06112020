@@ -380,7 +380,7 @@ footer ul{
 /*Fin du Footer*/
 
 /*Début MediaQuery Tablet*/
-@media only screen and (min-width: 600px) and (max-width: 1024px){ 
+@media screen and (max-width: 1024px){ 
 header{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -494,7 +494,7 @@ footer{
 /*Fin MediaQuery Tablet*/
 
 /*Début MediaQuery Phone*/
-@media only screen and (min-width: 320px) and (max-width: 600px){
+@media screen and (max-width: 600px){
 header{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -605,13 +605,15 @@ section{
     order: 3;
     width: auto;
     height: 60em;
-    padding-bottom: 120%;
-    display: flex;
-    flex-direction: column;
+    padding-bottom: 100%;  
 }
 .activityMainCard{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;  
+}
+.activityCard{
+    width: auto;
 }
 .activityCard img{
     width: 100%;
